@@ -9,10 +9,38 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBAction func Linguagem(_ sender: Any) {
+        print("Oi")
+    }
+    
+    @IBOutlet weak var Input: UITextField!
+    @IBOutlet weak var NotaResult: UILabel!
+    @IBOutlet weak var ValueNota: UIStepper!
+    @IBOutlet weak var ValueVersao: UISlider!
+    
+    
+    @IBAction func Nota(_ sender: Any) {
+        NotaResult.text = "\(Int(ValueNota.value))"
+        
+    }
+    
+    @IBOutlet weak var VersaoResult: UILabel!
+    
+    @IBAction func Versao(_ sender: Any) {
+        VersaoResult.text = "\(Int(ValueVersao.value))"
+    }
+    
+    @IBAction func Like(_ sender: Any) {
+        
+    }
+    
+    @IBAction func Salvar(_ sender: Any) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        NotaResult.text = "0"
+        VersaoResult.text = "1"
     }
 
     override func didReceiveMemoryWarning() {
